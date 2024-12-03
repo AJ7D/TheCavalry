@@ -1,19 +1,19 @@
 body, html {
-  height: 100%; /* Ensure the body and html take the full height */
-  margin: 0;    /* Remove default margin */
+  height: 100%; 
+  margin: 0; 
 }
 
 .container {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center;     /* Center vertically */
-  height: 100vh;           /* Full height of the viewport */
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
 }
 
 .content {
-  text-align: center; /* Optional: center the text inside */
-  padding: 20px;      /* Optional: some padding around the content */
-  border: 1px solid #ccc; /* Optional: for visual clarity */
+  text-align: center; 
+  padding: 20px;
+  border: 1px solid #ccc; 
 }
 
 

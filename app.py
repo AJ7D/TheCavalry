@@ -1,9 +1,20 @@
 import json
-from flask import Flask, render_template, request, redirect, url_for, session, flash
+from flask import Flask, render_template, request, redirect, url_for, session, flash, send_from_directory
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static/build')
 app.secret_key = 'your_secret_key'
 
+<<<<<<< Updated upstream
+=======
+
+
+# Add route to serve React's static assets
+@app.route('/static/<path:path>')
+def serve_static(path):
+    return send_from_directory(app.static_folder + '/static', path)
+
+
+>>>>>>> Stashed changes
 # Load user data from user.json
 def load_user_data():
     with open('user.json', 'r') as f:
@@ -62,9 +73,9 @@ def login():
 
     return render_template('login.html')
 
-# Index route (Dashboard)
 @app.route('/')
 def index():
+<<<<<<< Updated upstream
     if 'username' not in session:
         return redirect(url_for('login'))  # Redirect to login if not logged in
     
@@ -79,6 +90,9 @@ def index():
         total_savings = sum(plan.get('locked', 0) for plan in user_plans)
         return render_template('index.html', user=user, plans=user_plans, total_savings=total_savings)
     return redirect(url_for('login'))
+=======
+    return send_from_directory(app.static_folder, 'index.html')
+>>>>>>> Stashed changes
 
 # Create new plan route
 @app.route('/create_plan', methods=['GET', 'POST'])
