@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="index.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <h1>Welcome, {{ user['username'] }}!</h1>
-    <h2>Your Points: {{ user['points'] }}</h2>
-    <h3>Your Balance: ${{ user['amount'] }}</h3>  <!-- Display user's amount here -->
+    <div class="container">
+        <h1>Welcome, {{ user['username'] }}!</h1>
+        <h2>Your Points: {{ user['points'] }}</h2>
+        <h3>Your Balance: ${{ user['amount'] }}</h3>  <!-- Display user's amount here -->
 
-    <h2>Your Plans</h2>
-    <ul>
-        {% for plan in plans %}
-        <li>
-            <a href="{{ url_for('view_plan', plan_id=plan['plan_id']) }}">{{ plan['title'] }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    <a href="{{ url_for('create_plan') }}">Create a new plan</a><br>
-    <a href="{{ url_for('challenges') }}">View Challenges</a><br>
-    <a href="{{ url_for('rewards') }}">View Rewards</a>
+        <h2>Your Plans</h2>
+        <ul class="plans-list">
+            {% for plan in plans %}
+            <li>
+                <a class="button" href="{{ url_for('view_plan', plan_id=plan['plan_id']) }}">{{ plan['title'] }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <div class="button-container">
+            <a class="button" href="{{ url_for('create_plan') }}">Create a new plan</a>
+            <a class="button" href="{{ url_for('challenges') }}">View Challenges</a>
+            <a class="button" href="{{ url_for('rewards') }}">View Rewards</a>
+        </div>
+    </div>
 </body>
 </html>
