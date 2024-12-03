@@ -1,0 +1,47 @@
+.custom-button {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 120px;
+    max-height: 120px;
+    padding: 16px;
+    border-radius: 15px;
+    border-width: 15px;
+    border: 5px solid #54B37F;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 0 #54B37F;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #54B37F;;
+}
+
+.custom-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.button-label {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center; 
+    align-items: center;
+}
