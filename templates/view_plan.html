@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ plan['title'] }}</title>
+</head>
+<body>
+    <h1>{{ plan['title'] }}</h1>
+    <p>{{ plan['description'] }}</p>
+    <p>Target Amount: {{ plan['target_amount'] }}</p>
+    <p>Locked Amount: {{ plan['locked'] }}</p>
+
+    <form method="POST">
+        <label for="lock_amount">Lock Amount: </label>
+        <input type="number" name="lock_amount" min="0" value="0"><br><br>
+
+        <label for="unlock_amount">Unlock Amount: </label>
+        <input type="number" name="unlock_amount" min="0" value="0"><br><br>
+
+        <button type="submit">Update Plan</button>
+    </form>
+
+    <a href="{{ url_for('index') }}">Back to Dashboard</a>
+</body>
+</html>

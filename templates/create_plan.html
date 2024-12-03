@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Plan</title>
+</head>
+<body>
+    <h1>Create a New Plan</h1>
+    <form method="POST">
+        <label for="title">Plan Title: </label>
+        <input type="text" name="title" required><br><br>
+
+        <label for="description">Description: </label>
+        <input type="text" name="description" required><br><br>
+
+        <label for="target_amount">Target Amount: </label>
+        <input type="number" name="target_amount" required><br><br>
+
+        <button type="submit">Create Plan</button>
+    </form>
+
+    <a href="{{ url_for('index') }}">Back to Dashboard</a>
+</body>
+</html>

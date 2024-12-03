@@ -1,0 +1,14 @@
+[
+    {
+        "username": "user1",
+        "plans": [
+            {
+                "plan_id": 1,
+                "title": "Vacation Fund",
+                "description": "Saving for a vacation",
+                "target_amount": 1000,
+                "locked": 190.0
+            }
+        ]
+    }
+]

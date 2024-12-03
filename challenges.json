@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Achieve 500 savings",
+        "type": "savings",
+        "goal": 500,
+        "points": 25,
+        "completed": false,
+        "claimed": false
+    },
+    {
+        "id": 2,
+        "name": "Achieve 1000 savings",
+        "type": "savings",
+        "goal": 1000,
+        "points": 50,
+        "completed": false,
+        "claimed": false
+    }
+]

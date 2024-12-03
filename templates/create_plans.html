@@ -1,0 +1,28 @@
+<!DO<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Plan</title>
+</head>
+<body>
+    <h2>Create New Plan</h2>
+    <form method="POST">
+        <div>
+            <label for="title">Plan Title:</label>
+            <input type="text" name="title" required>
+        </div>
+        <div>
+            <label for="description">Plan Description:</label>
+            <textarea name="description" required></textarea>
+        </div>
+        <div>
+            <label for="target_amount">Target Amount ($):</label>
+            <input type="number" name="target_amount" step="0.01" required>
+        </div>
+        <br>
+        <button type="submit">Create Plan</button>
+    </form>
+
+</body>
+</html>

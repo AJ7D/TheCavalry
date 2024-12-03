@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges</title>
+</head>
+<body>
+    <h1>Challenges</h1>
+
+    <h3>Your Points: {{ user['points'] }}</h3>
+
+    <ul>
+        {% for challenge in challenges %}
+        <li>
+            <h4>{{ challenge['name'] }}</h4>
+            <p>Goal: {{ challenge['goal'] }}</p>
+            {% if challenge['completed'] %}
+            <form method="POST">
+                <input type="hidden" name="challenge_id" value="{{ challenge['id'] }}">
+                <button type="submit" {% if challenge['claimed'] %} disabled {% endif %}>
+                    {% if challenge['claimed'] %} Claimed {% else %} Claim Points {% endif %}
+                </button>
+            </form>
+            {% else %}
+            <p>You have not completed this challenge yet.</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('index') }}">Back to Dashboard</a>
+</body>
+</html>

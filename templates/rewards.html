@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards</title>
+</head>
+<body>
+    <h1>Rewards</h1>
+
+    <h3>Your Points: {{ user['points'] }}</h3>
+
+    <ul>
+        {% for reward in rewards %}
+        <li>
+            <h4>{{ reward['name'] }}</h4>
+            <p>Points Needed: {{ reward['points'] }}</p>
+            <form method="POST">
+                <input type="hidden" name="reward_id" value="{{ reward['id'] }}">
+                <button type="submit" {% if user['points'] < reward['points'] %} disabled {% endif %}>
+                        {% if user['points'] < reward['points'] %} Not Enough Points {% else %} Redeem {% endif %}
+                    </button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{{ url_for('index') }}">Back to Dashboard</a>
+</body>
+</html>
