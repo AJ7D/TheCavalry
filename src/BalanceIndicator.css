@@ -1,0 +1,38 @@
+.balance-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    background-color: transparent;
+    color: black;
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: 8px auto;
+    border: 0px solid #54B37F;
+    border-radius: 7px;
+}
+
+.balance-indicator img {
+    margin-left: 8px;
+    width: 24px; /* Adjust image size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (max-width: 768px) { /* Update breakpoint to 768px for mobile */
+    .balance-indicator {
+        font-size: 16px;
+        padding: 12px;
+        width: 80%; /* Make it take up more space on mobile */
+    }
+
+    .balance-indicator img {
+        margin-left: 8px;
+        width: 24px;
+        height: auto;
+        max-width: 100%; /* Ensure it doesn’t overflow */
+    }    
+}
+

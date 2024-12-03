@@ -1,0 +1,69 @@
+.streak-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* Adjust width here, or change to 100% for responsiveness */
+    background-color: white;
+    color: black;
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: 8px auto;
+    border: 3px solid #54B37F;
+    border-radius: 7px;
+}
+
+.streak-display img {
+    margin-left: 8px;
+    width: 24px; /* Adjust image size */
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .streak-display {
+        font-size: 16px;
+        padding: 12px; /* Reduce padding on mobile */
+        width: 80%; /* Adjust width for responsiveness on smaller screens */
+    }
+
+    .streak-display img {
+        width: 20px; /* Adjust image size for mobile */
+    }
+}
+
+.balance-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* Make the banner stretch the full width of the page */
+    background-color: transparent;
+    color: black;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin: 0px auto;
+    border: 0px solid #54B37F;
+    border-radius: 0px;
+}
+
+.balance-indicator img {
+    margin-left: 8px; 
+    width: 24px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .balance-indicator {
+        font-size: 16px;
+        padding: 0px;
+        width: 80%; /* Adjust width for mobile */
+    }
+
+    .balance-indicator img {
+        width: 20px; 
+    }
+}
+

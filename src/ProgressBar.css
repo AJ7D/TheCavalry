@@ -1,0 +1,43 @@
+/* ProgressBar.css */
+.progress-container {
+    width: 100%; /* Full width container */
+    text-align: center; /* Center the text */
+    margin: 16px 0; /* Add some margin around the container */
+}
+
+.progress-text {
+    font-size: 18px; /* Font size for the text */
+    margin-bottom: 8px; /* Space between the text and the progress bar */
+    font-weight: bold; /* Make the text bold */
+}
+
+.progress-bar-background {
+    width: 100%; /* Full width container for the progress bar */
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 8px; /* Rounded corners */
+    height: 24px; /* Set the height of the progress bar */
+}
+
+.progress-bar {
+    height: 100%; /* Fill the height of the background */
+    background-color: #54B37F; /* Green progress color */
+    border-radius: 8px; /* Rounded corners */
+    transition: width 0.3s ease; /* Smooth transition when the progress changes */
+}
+
+.aligned-text {
+    display: flex; /* Enable Flexbox */
+    justify-content: space-between; /* Distribute space between the elements */
+    width: 100%; /* Ensure the container takes up full width */
+    font-size: 18px; /* Optional, adjust text size */
+    padding: 0; /* Remove any default padding */
+    margin: 0; /* Remove any default margin */
+}
+
+.left {
+    text-align: left; /* Align the text to the left */
+}
+
+.right {
+    text-align: right; /* Align the text to the right */
+}

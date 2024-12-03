@@ -1,0 +1,20 @@
+/* Banner Styling */
+.banner {
+    width: 100%; /* Make the banner stretch the full width of the page */
+    background-color: #54B37F; /* Green background color */
+    color: white; /* White text color for good contrast */
+    padding: 16px; /* Add spacing inside the banner */
+    text-align: center; /* Center the text horizontally */
+    font-size: 18px; /* Adjust font size for readability */
+    font-weight: bold; /* Make the text bold */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    margin: 8px 0; /* Add space between banners */
+}
+
+/* Responsive Text Adjustment for Smaller Screens */
+@media (max-width: 768px) {
+    .banner {
+        font-size: 16px; /* Slightly smaller font for mobile */
+        padding: 12px; /* Reduce padding on smaller screens */
+    }
+}

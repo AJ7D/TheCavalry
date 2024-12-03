@@ -1,3 +1,22 @@
+body, html {
+  height: 100%; /* Ensure the body and html take the full height */
+  margin: 0;    /* Remove default margin */
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  height: 100vh;           /* Full height of the viewport */
+}
+
+.content {
+  text-align: center; /* Optional: center the text inside */
+  padding: 20px;      /* Optional: some padding around the content */
+  border: 1px solid #ccc; /* Optional: for visual clarity */
+}
+
+
 .App {
   text-align: center;
 }
